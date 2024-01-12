@@ -20,7 +20,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.3 0.44 0.3</size>
+            <size>0.133 0.133 0.036</size>
           </box>
         </geometry>
 
@@ -104,7 +104,7 @@
 
     <!-- wheel_0 -->
     <link name='wheel_0'>
-      <pose relative_to='base_link'>0 -0.22916 0 1.5708 0 0</pose>
+      <pose relative_to='base_link'>0 -0.22696 0 1.5708 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.2</mass>
@@ -176,7 +176,7 @@
 
     <!-- wheel_1 -->
     <link name='wheel_1'>
-      <pose relative_to='base_link'>0 0.22916 0 1.5708 0 0</pose>
+      <pose relative_to='base_link'>0 0.22696 0 1.5708 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.2</mass>
@@ -262,11 +262,12 @@
       </inertial>
 
       <collision name='tilt_0_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 -0.095 0 1.5708 0 0</pose>
         <geometry>
-          <box>
-            <size>0.008 0.12 0.008</size>
-          </box>
+          <cylinder>
+            <length>0.19</length>
+            <radius>0.008</radius>
+          </cylinder>
         </geometry>
         <surface>
           <contact>
@@ -304,10 +305,8 @@
       <axis>
         <xyz>0 -1 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -408,11 +407,12 @@
       </inertial>
 
       <collision name='tilt_1_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 -0.095 0 1.5708 0 0</pose>
         <geometry>
-          <box>
-            <size>0.008 0.12 0.008</size>
-          </box>
+          <cylinder>
+            <length>0.19</length>
+            <radius>0.008</radius>
+          </cylinder>
         </geometry>
         <surface>
           <contact>
@@ -451,10 +451,8 @@
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -555,11 +553,12 @@
       </inertial>
 
       <collision name='tilt_2_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 -0.095 0 1.5708 0 0</pose>
         <geometry>
-          <box>
-            <size>0.008 0.12 0.008</size>
-          </box>
+          <cylinder>
+            <length>0.19</length>
+            <radius>0.008</radius>
+          </cylinder>
         </geometry>
         <surface>
           <contact>
@@ -596,10 +595,8 @@
       <axis>
         <xyz>-1 0 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -700,11 +697,12 @@
       </inertial>
 
       <collision name='tilt_3_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 -0.095 0 1.5708 0 0</pose>
         <geometry>
-          <box>
-            <size>0.008 0.12 0.008</size>
-          </box>
+          <cylinder>
+            <length>0.19</length>
+            <radius>0.008</radius>
+          </cylinder>
         </geometry>
         <surface>
           <contact>
@@ -742,10 +740,8 @@
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -905,7 +901,7 @@
     </plugin>
     <include>
       <uri>model://gps</uri>
-      <pose relative_to='base_link'>0.06 0 0.02 0 0 0</pose>
+      <pose relative_to='base_link'>0 0 0 0 0 0</pose>
       <name>gps0</name>
     </include>
     <joint name='gps0_joint' type='fixed'>
