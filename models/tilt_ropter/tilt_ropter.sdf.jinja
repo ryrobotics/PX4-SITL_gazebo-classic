@@ -163,7 +163,7 @@
       <child>wheel_0</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 -1 0</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -238,7 +238,7 @@
       <child>wheel_1</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0 1 0</xyz>
+        <xyz>0 -1 0</xyz>
         <limit>
           <lower>-1e+16</lower>
           <upper>1e+16</upper>
@@ -253,7 +253,7 @@
 
     <!-- tilt_0 -->
     <link name='tilt_0'>
-      <pose relative_to='base_link'>0 -0.041958 0 0 0 0</pose>
+      <pose relative_to='base_link'>0 -0.041958 0 0 0 -1.5708</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.05</mass>
@@ -268,7 +268,7 @@
       </inertial>
 
       <collision name='tilt_0_collision'>
-        <pose>0 -0.095 0 1.5708 0 0</pose>
+        <pose>0.095 0 0 0 1.5708 0</pose>
         <geometry>
           <cylinder>
             <length>0.19</length>
@@ -315,6 +315,7 @@
           <upper>1.57</upper>
         </limit>
         <dynamics>
+          <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -325,7 +326,7 @@
 
     <!-- rotor_0 -->
     <link name='rotor_0'>
-      <pose relative_to='tilt_0'>0 -0.0975 0.0297 0 0 0</pose>
+      <pose relative_to='tilt_0'>0.0975 0 0.0297 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -398,7 +399,7 @@
 
     <!-- tilt_1 -->
     <link name='tilt_1'>
-      <pose relative_to='base_link'>0 0.041958 0 0 0 3.14159</pose>
+      <pose relative_to='base_link'>0 0.041958 0 0 0 1.5708</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.05</mass>
@@ -413,7 +414,7 @@
       </inertial>
 
       <collision name='tilt_1_collision'>
-        <pose>0 -0.095 0 1.5708 0 0</pose>
+        <pose>0.095 0 0 0 1.5708 0</pose>
         <geometry>
           <cylinder>
             <length>0.19</length>
@@ -461,6 +462,7 @@
           <upper>1.57</upper>
         </limit>
         <dynamics>
+          <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -471,7 +473,7 @@
 
     <!-- rotor_1 -->
     <link name='rotor_1'>
-      <pose relative_to='tilt_1'>0 -0.0975 0.0297 0 0 0</pose>
+      <pose relative_to='tilt_1'>0.0975 0 0.0297 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -544,7 +546,7 @@
 
     <!-- tilt_2 -->
     <link name='tilt_2'>
-      <pose relative_to='base_link'>0.041958 0 0 0 0 1.5708</pose>
+      <pose relative_to='base_link'>0.041958 0 0 0 0 0</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.05</mass>
@@ -559,7 +561,7 @@
       </inertial>
 
       <collision name='tilt_2_collision'>
-        <pose>0 -0.095 0 1.5708 0 0</pose>
+        <pose>0.095 0 0 0 1.5708 0</pose>
         <geometry>
           <cylinder>
             <length>0.19</length>
@@ -599,12 +601,13 @@
       <child>tilt_2</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-1 0 0</xyz>
+        <xyz>1 0 0</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
         </limit>
         <dynamics>
+          <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -615,7 +618,7 @@
 
     <!-- rotor_2 -->
     <link name='rotor_2'>
-      <pose relative_to='tilt_2'>0 -0.0975 0.0297 0 0 0</pose>
+      <pose relative_to='tilt_2'>0.09775 0 0.0297 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -688,7 +691,7 @@
 
     <!-- tilt_3 -->
     <link name='tilt_3'>
-      <pose relative_to='base_link'>-0.041958 0 0 0 0 -1.5708</pose>
+      <pose relative_to='base_link'>-0.041958 0 0 0 0 -3.1416</pose>
       <inertial>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <mass>0.05</mass>
@@ -703,7 +706,7 @@
       </inertial>
 
       <collision name='tilt_3_collision'>
-        <pose>0 -0.095 0 1.5708 0 0</pose>
+        <pose>0.095 0 0 0 1.5708 0</pose>
         <geometry>
           <cylinder>
             <length>0.19</length>
@@ -744,12 +747,13 @@
       <child>tilt_3</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>1 0 0</xyz>
+        <xyz>-1 0 0</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
         </limit>
         <dynamics>
+          <friction>1.0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -760,7 +764,7 @@
 
     <!-- rotor_3 -->
     <link name='rotor_3'>
-      <pose relative_to='tilt_3'>0 -0.0975 0.0297 0 0 0</pose>
+      <pose relative_to='tilt_3'>0.09775 0 0.0297 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
