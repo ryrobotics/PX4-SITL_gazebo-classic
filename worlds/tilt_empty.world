@@ -46,6 +46,9 @@
           <xyz>-2 -2 1.5</xyz>
           <inherit_yaw>true</inherit_yaw>
         </track_visual>
+        <pose>-10 -1 4 0 0.275643 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
     </camera>
     </gui>
   </world>
